@@ -1,0 +1,35 @@
+main {
+    display: flex;
+    flex-direction: row;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 2vh;
+    gap: 1vh;
+    
+    height: 100vh;
+    width: 25vw;
+    
+    color: white;
+    background-color: #132a40;
+}
+
+aside img {
+    max-width: 50px;
+}
+
+aside h1 {
+    font-size: 1.75rem;
+}
+
+aside h2 {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+}
