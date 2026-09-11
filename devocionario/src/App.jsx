@@ -1,15 +1,17 @@
 import "./App.css";
+import Home from "./components/Home";
+import SideBar from "./components/SideBar";
+import TopBar from "./components/TopBar";
 
 function App() {
     return (
-        <main>
-            <aside>
-                <img src="./src/assets/crucifix.png" alt="" />
-                <h1>Meu Devocionário</h1>
-                <h2>Um caminho de fé, todos os dias</h2>
-            </aside>
-            <main id="main"></main>
-        </main>
+        <div className="container">
+            <SideBar />
+            <main className="flex-column">
+                <TopBar />
+                <Home />
+            </main>
+        </div>
     );
 }
 
