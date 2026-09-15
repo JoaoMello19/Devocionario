@@ -3,8 +3,8 @@ import "./Home.css";
 
 export default function Home() {
     return (
-        <>
+        <section className="content">
             <img src={saoBento} alt="" id="full-image" />
-        </>
+        </section>
     );
 }

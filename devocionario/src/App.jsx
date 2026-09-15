@@ -1,7 +1,8 @@
 import "./App.css";
-import Home from "./components/Home";
+import Home from "./pages/Home";
 import SideBar from "./components/SideBar";
 import TopBar from "./components/TopBar";
+import Rosary from "./pages/Rosary";
 
 function App() {
     return (
@@ -9,7 +10,8 @@ function App() {
             <SideBar />
             <main className="flex-column">
                 <TopBar />
-                <Home />
+                {/* <Home /> */}
+                <Rosary />
             </main>
         </div>
     );
