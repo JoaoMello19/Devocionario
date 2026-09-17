@@ -1,3 +1,11 @@
 .mystery {
     font-size: 1.25rem;
 }
+
+.set-title {
+    cursor: pointer;
+}
+
+.meditation {
+    font-weight: bold;
+}

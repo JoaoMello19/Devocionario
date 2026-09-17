@@ -1,5 +1,11 @@
 import "./Rosary.css";
-import { joyfulMysteries } from "../data/rosary.js";
+import {
+    joyfulMysteries,
+    sorrowfulMysteries,
+    gloriousMysteries,
+    luminousMysteries,
+} from "../data/rosary.js";
+import { useState } from "react";
 
 function Offering() {
     return (
@@ -25,9 +31,11 @@ function Offering() {
                 nosso país e por todas as nossas intenções particulares.
             </p>
 
-            <span>(Apresentar suas intenções)</span>
+            <span className="annotation">(Apresentar suas intenções)</span>
 
-            <span>(Creio, Pai Nosso, 3 Ave Marias, Glória ao Pai)</span>
+            <span className="annotation">
+                (Creio, Pai Nosso, 3 Ave Marias, Glória ao Pai)
+            </span>
         </>
     );
 }
@@ -71,15 +79,52 @@ function Thanksgiving() {
                 para mais nos obrigar vos saudamos com uma Salve Rainha.
             </p>
 
-            <span>(Salve Rainha, Sinal da Cruz)</span>
+            <span className="annotation">(Salve Rainha, Sinal da Cruz)</span>
         </>
     );
 }
 
-function Mystery({ data }) {
+function Mystery({ mystery }) {
+    const title = `${mystery.number}° Mistério: ${mystery.title}`;
     return (
         <>
-            <h3>{data.title}</h3>
+            <h4>{title}</h4>
+            <p>{mystery.offering}</p>
+
+            <span className="annotation">(Pai Nosso)</span>
+
+            <p>
+                Ave Maria, cheia de graça, o Senhor é convosco, bendita sois vós
+                entre as mulheres, e bendito é o fruto do vosso ventre, Jesus,{" "}
+                <span className="meditation">{mystery.meditation}</span>. Santa
+                Maria, Mãe de Deus, rogai por nós, pecadores, agora e na hora da
+                nossa morte. Amém.
+            </p>
+
+            <span className="annotation">(Glória ao Pai, Jaculatória)</span>
+        </>
+    );
+}
+
+function MysterySet({ data }) {
+    const [open, setOpen] = useState(false);
+
+    return (
+        <>
+            <h3
+                className="set-title"
+                onClick={() => {
+                    setOpen(!open);
+                }}
+            >
+                {open ? "▼ " : "► "}
+                {data.title}
+            </h3>
+
+            {open &&
+                data.mysteries.map((mystery) => (
+                    <Mystery key={mystery.id} mystery={mystery} />
+                ))}
         </>
     );
 }
@@ -89,13 +134,16 @@ export default function Rosary() {
         <section className="content">
             <h2 className="page-title">Santo Terço</h2>
 
-            <span>(Sinal da Cruz)</span>
+            <span className="annotation">(Sinal da Cruz)</span>
 
             <Offering />
 
             <ShortPrayers />
 
-            <Mystery data={joyfulMysteries} />
+            <MysterySet data={joyfulMysteries} />
+            <MysterySet data={sorrowfulMysteries} />
+            <MysterySet data={gloriousMysteries} />
+            <MysterySet data={luminousMysteries} />
 
             <Thanksgiving />
         </section>

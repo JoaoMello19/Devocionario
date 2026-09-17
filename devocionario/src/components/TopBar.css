@@ -21,3 +21,10 @@
 #title h1 {
     font-size: 2rem;
 }
+
+/* Mobile */
+@media (min-width: 769px) {
+    #topbar {
+        display: none;
+    }
+}

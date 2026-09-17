@@ -16,9 +16,9 @@ function NavigationItem({ href = "#", text, isActive }) {
     );
 }
 
-export default function SideBar() {
+export default function SideBar({ menuOpen }) {
     return (
-        <aside id="sidebar" className="flex-column">
+        <aside id="sidebar" className={menuOpen ? "open flex-column" : "flex-column"}>
             <img src={crucifix} alt="" />
             <h1>Meu Devocionário</h1>
             <h2>Um caminho de fé, todos os dias</h2>

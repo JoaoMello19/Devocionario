@@ -5,7 +5,7 @@
     --red: #d01;
     --yellow: #d8b45a;
     --dark-blue: #132a40;
-    --medium-blue: #346d92;
+    --medium-blue: #22608a;
     --white-75: rgba(255, 255, 255, 0.75);
     --white-10: rgba(255, 255, 255, 0.1);
 }
@@ -55,12 +55,12 @@ h2 {
     flex-direction: column;
 
     gap: 1rem;
-    margin: 1rem 5rem;
+    margin: 1rem 5vw 10rem 5vw;
 
     color: black;
 }
 
-.content span {
+.content .annotation {
     font-style: italic;
     color: rgba(0, 0, 0, 0.75);
 }
@@ -72,10 +72,12 @@ h2 {
 }
 
 .content h4 {
+    margin-top: 0.25rem;
     font-size: 1.1rem;
     color: var(--medium-blue);
 }
 
 .content p {
+    line-height: 1.25;
     text-align: justify;
 }

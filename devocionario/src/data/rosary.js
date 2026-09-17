@@ -1,5 +1,5 @@
 export const joyfulMysteries = {
-    title: "Mistérios _",
+    title: "Mistérios Gozosos",
     mysteries: [
         {
             id: "annunciation",
@@ -60,7 +60,7 @@ export const joyfulMysteries = {
 };
 
 export const sorrowfulMysteries = {
-    title: "Mistérios _",
+    title: "Mistérios Dolorosos",
     mysteries: [
         {
             id: "agony",
@@ -120,7 +120,7 @@ export const sorrowfulMysteries = {
 };
 
 export const gloriousMysteries = {
-    title: "Mistérios _",
+    title: "Mistérios Gloriosos",
     mysteries: [
         {
             id: "resurrection",
@@ -180,7 +180,7 @@ export const gloriousMysteries = {
 };
 
 export const luminousMysteries = {
-    title: "Mistérios _",
+    title: "Mistérios Luminosos",
     mysteries: [
         {
             id: "baptism",
