@@ -10,4 +10,12 @@ main {
     flex: 1;
     padding-bottom: 1rem;
     color: var(--dark-blue);
+    padding-left: var(--sidebar-width);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    main {
+        padding-left: 0;
+    }
 }

@@ -8,6 +8,8 @@
     --medium-blue: #22608a;
     --white-75: rgba(255, 255, 255, 0.75);
     --white-10: rgba(255, 255, 255, 0.1);
+
+    --sidebar-width: 20rem;
 }
 
 * {
@@ -22,10 +24,6 @@
     border: none;
 
     text-decoration: none;
-}
-
-body {
-    background-color: #eee;
 }
 
 .flex-column {

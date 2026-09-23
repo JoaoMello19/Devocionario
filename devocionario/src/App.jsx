@@ -1,9 +1,11 @@
+import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+
 import "./App.css";
 import Home from "./pages/Home";
 import SideBar from "./components/SideBar";
 import TopBar from "./components/TopBar";
 import Rosary from "./pages/Rosary";
-import { useState } from "react";
 
 function App() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +16,10 @@ function App() {
             <main className="flex-column">
                 <TopBar onClick={() => setMenuOpen(!menuOpen)} />
                 {/* <Home /> */}
-                <Rosary />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/rosary" element={<Rosary />} />
+                </Routes>
             </main>
         </div>
     );

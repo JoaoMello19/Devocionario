@@ -1,4 +1,9 @@
 #full-image {
-    max-width: calc(100% - 2rem);
+    margin: auto;
+    height: calc(100% - 2rem);
+    width: calc(100% - 2rem);
     border-radius: 1rem;
+
+    object-fit: cover;
+    opacity: 95%;
 }

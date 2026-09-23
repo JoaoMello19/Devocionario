@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import "./Rosary.css";
 import {
     joyfulMysteries,
@@ -5,12 +7,13 @@ import {
     gloriousMysteries,
     luminousMysteries,
 } from "../data/rosary.js";
-import { useState } from "react";
 
 function Offering() {
     return (
         <>
             <h3>Oferecimento</h3>
+
+            <span className="annotation">(Sinal da Cruz)</span>
 
             <p>
                 Divino Jesus, nós vos oferecemos este terço que vamos rezar,
@@ -133,8 +136,6 @@ export default function Rosary() {
     return (
         <section className="content">
             <h2 className="page-title">Santo Terço</h2>
-
-            <span className="annotation">(Sinal da Cruz)</span>
 
             <Offering />
 
