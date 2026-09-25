@@ -41,6 +41,12 @@ export default function SideBar({ menuOpen }) {
             icon: rosary,
             activeIcon: rosaryActive,
         },
+        {
+            link: "/angelus",
+            title: "Angelus",
+            icon: rosary,
+            activeIcon: rosaryActive,
+        },
     ];
 
     return (
